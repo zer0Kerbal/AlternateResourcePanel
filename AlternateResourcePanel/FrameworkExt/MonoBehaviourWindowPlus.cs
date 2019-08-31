@@ -141,9 +141,8 @@ namespace KSPPluginFramework
         }
         internal override void OnGUIEvery()
         {
-            ddlManager.CloseOnOutsideClicks();
-
             base.OnGUIEvery();
+            ddlManager.CloseOnOutsideClicks();
         }
 
         public class DropDownListManager:List<DropDownList>
