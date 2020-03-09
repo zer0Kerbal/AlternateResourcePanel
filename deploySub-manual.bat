@@ -15,7 +15,7 @@ set README="ReadMe.md"
 set GAMEDATA="GameData\"
 set VERSIONFILE=%GAMEDIR%.version
 
-copy /Y "%1%2" "%GAMEDATA%\%GAMEDIR%\Plugins"
+copy /Y AlternateResourcePanel\bin\Release\KSPAlternateResourcePanel.dll "%GAMEDATA%\%GAMEDIR%\Plugins"
 copy /Y %VERSIONFILE% %GAMEDATA%\%SUBDIR%%GAMEDIR%
 REM copy /Y %CHANGELOG% %GAMEDATA%\%SUBDIR%%GAMEDIR%
 REM copy /Y %README% %GAMEDATA%\%SUBDIR%%GAMEDIR%

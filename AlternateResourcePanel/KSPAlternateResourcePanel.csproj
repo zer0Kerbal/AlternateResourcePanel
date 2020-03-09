@@ -46,8 +46,8 @@
     <Reference Include="$(DevDir19)\KSP_x64_Data\Managed\UnityEngine*.dll">
       <Private>False</Private>
     </Reference>
-    <Reference Include="ClickThroughBlocker">
-      <HintPath>..\..\..\..\Games\Dev1.9\GameData\000_ClickThroughBlocker\Plugins\ClickThroughBlocker.dll</HintPath>
+    <Reference Include="$(DevDir19)\GameData\000_ClickThroughBlocker\Plugins\ClickThroughBlocker.dll">
+      <Private>False</Private>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -155,6 +155,12 @@
     <!-- "%25Binary%25" -->
     <!-- goto END -->
     <!-- :END</PostBuildEvent> -->
+  </PropertyGroup>
+    <PropertyGroup>
+    <PostBuildEvent>start /D $(ProjectDir)..\  /WAIT deploySUB.bat $(TargetDir) $(TargetFileName)
+
+if $(ConfigurationName) == Release start /D $(ProjectDir)..\ /WAIT buildReleaseNEW.bat $(TargetDir) $(TargetFileName)
+    </PostBuildEvent>
   </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

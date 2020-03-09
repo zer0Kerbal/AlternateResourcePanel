@@ -19,12 +19,12 @@ rem    but not always
 rem LICENSE is the license file
 rem README is the readme file
 
-set GAMEDIR=DockingPortDescriptions
+set GAMEDIR=AlternateResourcePanel
 set GAMEDATA="GameData\"
-set SUBDIR="KGEx\"
+set SUBDIR="TriggerTech\"
 set VERSIONFILE=%GAMEDIR%.version
 set LICENSE="License.txt"
-Set LICENSETEXT="CC-BY-NC-SA-4.0.txt"
+Set LICENSETEXT="MIT.txt"
 set README="Readme.md"
 set JQ=C:\ProgramData\chocolatey\lib\jq\tools\jq.exe
 

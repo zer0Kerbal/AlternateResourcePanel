@@ -684,7 +684,7 @@ namespace KSPAlternateResourcePanel
                 GUILayout.BeginHorizontal();
                 GUILayout.Space(80);
                 if(GUILayout.Button("Updated Version Available", Styles.styleTextYellowBold))
-                    Application.OpenURL("https://github.com/TriggerAu/AlternateResourcePanel/releases"); 
+                    Application.OpenURL("https://github.com/zer0Kerbal/AlternateResourcePanel/releases/latest"); 
                 GUILayout.EndHorizontal();
             }
             GUILayout.EndVertical();
@@ -705,9 +705,9 @@ namespace KSPAlternateResourcePanel
             if (GUILayout.Button("Click Here", Styles.styleTextCenterGreen))
                 Application.OpenURL("https://sites.google.com/site/kspalternateresourcepanel/");
             if (GUILayout.Button("Click Here", Styles.styleTextCenterGreen))
-                Application.OpenURL("https://github.com/TriggerAu/AlternateResourcePanel/");
+                Application.OpenURL("https://github.com/zer0Kerbal/AlternateResourcePanel/");
             if (GUILayout.Button("Click Here", Styles.styleTextCenterGreen))
-                Application.OpenURL("http://forum.kerbalspaceprogram.com/threads/60227-KSP-Alternate-Resource-Panel");
+                Application.OpenURL("http://forum.kerbalspaceprogram.com/threads/60227-*");
 
             GUILayout.EndVertical();
 

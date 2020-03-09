@@ -83,8 +83,8 @@ namespace KSPAlternateResourcePanel
             LogFormatted("Awakening the AlternateResourcePanel (ARP)");
 
             LogFormatted("Checking for PluginData folder");
-            if (!System.IO.Directory.Exists(Resources.PathPlugin + "/PluginData"))
-                System.IO.Directory.CreateDirectory(Resources.PathPlugin + "/PluginData");
+            if (!System.IO.Directory.Exists(Resources.PathPlugin + "/Plugins/PluginData"))
+                System.IO.Directory.CreateDirectory(Resources.PathPlugin + "/Plugins/PluginData");
 
             LogFormatted("Loading Settings");
             settings = new Settings("PluginData/settings.cfg");
@@ -96,9 +96,9 @@ namespace KSPAlternateResourcePanel
 				if (blnSettingsLoaded)
 				{
 					settings.FilePath = "PluginData/settings.cfg";
-					if (!System.IO.Directory.Exists(Resources.PathPlugin + "/PluginData"))
-						System.IO.Directory.CreateDirectory(Resources.PathPlugin + "/PluginData");
-					System.IO.File.Move(Resources.PathPlugin + "/settings.cfg", Resources.PathPlugin + "/PluginData/settings.cfg");
+					if (!System.IO.Directory.Exists(Resources.PathPlugin + "/Plugins/PluginData"))
+						System.IO.Directory.CreateDirectory(Resources.PathPlugin + "/Plugins/PluginData");
+					System.IO.File.Move(Resources.PathPlugin + "/settings.cfg", Resources.PathPlugin + "/Plugins/PluginData/settings.cfg");
 				}
 			}
 
