@@ -1,4 +1,10 @@
-AlternateResourcePanel
+# Alternate Resource Panel (ARP)
+## TriggerTech
+![ARP Version](https://img.shields.io/github/v/release/zer0Kerbal/AlternateResourcePanel?include_prereleases?style=plastic)
+![KSP version](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/zer0Kerbal/AlternateResourcePanel/master/json/ksp.json?style=plastic) ![KSP-AVC](https://img.shields.io/badge/KSP-AVC--supported-brightgreen.svg?style=plastic) ![License MIT](https://img.shields.io/badge/license-MIT-red?style=plastic)  
+![Spacedock](https://img.shields.io/badge/SpaceDock-listed-blue.svg?style=plastic) ![CKAN](https://img.shields.io/badge/CKAN-Indexed-blue.svg?style=plastic) ![Github](https://img.shields.io/badge/Github-Indexed-blue.svg?style=plastic) ![Curseforge](https://img.shields.io/badge/CurseForge-listed-blue.svg?style=plastic)
+
+
 ======================
 #####An alternate view of vessel resources plugin for [Kerbal Space Program](http://www.kerbalspaceprogram.com/)
 Forum Thread: [KSP Alternate Resource Panel](http://forum.kerbalspaceprogram.com/threads/60227-KSP-Alternate-Resource-Panel).  
