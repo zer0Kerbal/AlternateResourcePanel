@@ -8,6 +8,7 @@ using System.Text.RegularExpressions;
 using KSP;
 using UnityEngine;
 using KSPPluginFramework;
+using UnityEngine.Networking;
 
 namespace KSPAlternateResourcePanel
 {
@@ -251,7 +252,8 @@ namespace KSPAlternateResourcePanel
 
         internal Boolean VersionCheckRunning = false;
         BackgroundWorker bwVersionCheck;
-        WWW wwwVersionCheck;
+
+        UnityWebRequest wwwVersionCheck;
 
         void bwVersionCheck_DoWork(object sender, DoWorkEventArgs e)
         {
@@ -263,10 +265,10 @@ namespace KSPAlternateResourcePanel
 
             //now do the download
             MonoBehaviourExtended.LogFormatted("Reading version from Web");
-            wwwVersionCheck = new WWW(VersionCheckURL);
+            wwwVersionCheck = new UnityWebRequest(VersionCheckURL);
             while (!wwwVersionCheck.isDone) { }
-            MonoBehaviourExtended.LogFormatted("Download complete:{0}", wwwVersionCheck.text.Length);
-            MonoBehaviourExtended.LogFormatted_DebugOnly("Content:{0}", wwwVersionCheck.text);
+            MonoBehaviourExtended.LogFormatted("Download complete:{0}", wwwVersionCheck.ToString());
+            MonoBehaviourExtended.LogFormatted_DebugOnly("Content:{0}", wwwVersionCheck.ToString());
             VersionCheckRunning = false;
         }
 
@@ -276,7 +278,7 @@ namespace KSPAlternateResourcePanel
             {
                 //get the response from the variable and work with it
                 //Parse it for the version String
-                String strFile = wwwVersionCheck.text;
+                String strFile = wwwVersionCheck.ToString();
                 MonoBehaviourExtended.LogFormatted("Response Length:" + strFile.Length);
 
                 Match matchVersion;

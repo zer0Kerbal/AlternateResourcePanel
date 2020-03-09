@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -9,7 +9,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>KSPAlternateResourcePanel</RootNamespace>
     <AssemblyName>KSPAlternateResourcePanel</AssemblyName>
-    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />
     <SccProjectName>SAK</SccProjectName>
@@ -29,7 +29,7 @@
     </DocumentationFile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <DebugType>pdbonly</DebugType>
+    <DebugType>none</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
     <DefineConstants>TRACE</DefineConstants>
@@ -40,17 +40,18 @@
     <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Assembly-CSharp, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\_Versions\KSP_win_PluginTest\KSP_Data\Managed\Assembly-CSharp.dll</HintPath>
+    <Reference Include="$(DevDir19)\KSP_x64_Data\Managed\Assembly-CSharp*.dll">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="$(DevDir19)\KSP_x64_Data\Managed\UnityEngine*.dll">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="ClickThroughBlocker">
+      <HintPath>..\..\..\..\Games\Dev1.9\GameData\000_ClickThroughBlocker\Plugins\ClickThroughBlocker.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
-    <Reference Include="UnityEngine, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\_Versions\KSP_win_PluginTest\KSP_Data\Managed\UnityEngine.dll</HintPath>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="API.cs" />
@@ -70,6 +71,16 @@
     <Compile Include="Framework\MonoBehaviourExtended.cs" />
     <Compile Include="Framework\MonoBehaviourWindow.cs" />
     <Compile Include="Framework\SkinsLibrary.cs" />
+    <Compile Include="Properties\AssemblyVersion.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AssemblyVersion.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Version.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Version.tt</DependentUpon>
+    </Compile>
     <Compile Include="SharedStuff\ToolbarWrapper.cs" />
     <Compile Include="Resources.cs" />
     <Compile Include="FrameworkExt\ClassDefinitions.cs" />
@@ -80,69 +91,70 @@
     <Compile Include="FrameworkExt\MonoBehaviourWindowPlus.cs" />
     <Compile Include="StylesAndSkins.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Content Include="Properties\AssemblyVersion.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>AssemblyVersion.cs</LastGenOutput>
+    </Content>
+    <Content Include="Properties\Version.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Version.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
-    <PostBuildEvent>rem Set the Variables we need
-echo Finding KSP
-rem if exist "R:\~Games\KSP_Win_PlugInTest_Minimal\KSP.exe" (
-rem     set GAMEPATH="R:\~Games\KSP_Win_PlugInTest_Minimal"
-rem ) else if exist "D:\~Games\KSP_Win_PlugInTest_Minimal\KSP.exe" (
-rem     set GAMEPATH="D:\~Games\KSP_Win_PlugInTest_Minimal"
-rem ) else if exist "C:\~Games\KSP_Win_PlugInTest_Minimal\KSP.exe" (
-rem     set GAMEPATH="C:\~Games\KSP_Win_PlugInTest_Minimal
-rem ) else if exist "D:\~Games\KSP_Win_PlugInTest\KSP.exe" (
-
-if exist "D:\Programming\KSP\_Versions\KSP_Win_PlugInTest\KSP.exe" (
-    set GAMEPATH="D:\Programming\KSP\_Versions\KSP_Win_PlugInTest"
-) else if exist "C:\~Games\KSP_Win_PlugInTest\KSP.exe" (
-	set GAMEPATH="C:\~Games\KSP_Win_PlugInTest"
-)else (
-	echo "Cant find KSP"
-	exit 1
-)
-
-echo Gamepath: %25GAMEPATH%25
-echo ConfigName: $(ConfigurationName)
-set DestPath="%25GAMEPATH%25\GameData\TriggerTech\$(ProjectName)"
-set Binary="%25GAMEPATH%25\KSP.exe"
-
-if not $(ConfigurationName)==Debug goto DEBUGREBUILDCONFIG
-:DEBUGCONFIG
-rem Copy DLL and run KSP
-copy "$(TargetPath)" "%25DestPath%25"
-if exist "$(ProjectDir)..\..\StartX.exe" goto STARTX
-echo Running Directly
-"%25Binary%25"
-goto END
-
-:STARTX
-echo STARTX running
-"$(ProjectDir)..\..\StartX.exe" "%25Binary%25"
-goto END
-"%25Binary%25"
-
-goto END
-
-:DEBUGREBUILDCONFIG
-if not $(ConfigurationName)==DebugAndRebuild goto END
-rem This one will empty the dest folder and copy all the source files
-
-rem Delete the folder and recreate it
-rmdir /s /q "%25DestPath%25"
-mkdir "%25DestPath%25"
-
-rem Nowcopy all the files from the pluginfiles source
-xcopy "%25SourcePath%25\*.*" "%25DestPath%25" /SE
-rem and copy the new dll
-copy "$(TargetPath)" "%25DestPath%25"
-
-rem and then run the game
-"%25Binary%25"
-
-goto END
-
-:END</PostBuildEvent>
+    <!-- <PostBuildEvent>rem Set the Variables we need -->
+    <!-- echo Finding KSP -->
+    <!-- rem if exist "R:\~Games\KSP_Win_PlugInTest_Minimal\KSP.exe" ( -->
+    <!-- rem     set GAMEPATH="R:\~Games\KSP_Win_PlugInTest_Minimal" -->
+    <!-- rem ) else if exist "D:\~Games\KSP_Win_PlugInTest_Minimal\KSP.exe" ( -->
+    <!-- rem     set GAMEPATH="D:\~Games\KSP_Win_PlugInTest_Minimal" -->
+    <!-- rem ) else if exist "C:\~Games\KSP_Win_PlugInTest_Minimal\KSP.exe" ( -->
+    <!-- rem     set GAMEPATH="C:\~Games\KSP_Win_PlugInTest_Minimal -->
+    <!-- rem ) else if exist "D:\~Games\KSP_Win_PlugInTest\KSP.exe" ( -->
+    <!-- if exist "D:\Programming\KSP\_Versions\KSP_Win_PlugInTest\KSP.exe" ( -->
+    <!-- set GAMEPATH="D:\Programming\KSP\_Versions\KSP_Win_PlugInTest" -->
+    <!-- ) else if exist "C:\~Games\KSP_Win_PlugInTest\KSP.exe" ( -->
+    <!-- set GAMEPATH="C:\~Games\KSP_Win_PlugInTest" -->
+    <!-- )else ( -->
+    <!-- echo "Cant find KSP" -->
+    <!-- exit 1 -->
+    <!-- ) -->
+    <!-- echo Gamepath: %25GAMEPATH%25 -->
+    <!-- echo ConfigName: $(ConfigurationName) -->
+    <!-- set DestPath="%25GAMEPATH%25\GameData\TriggerTech\$(ProjectName)" -->
+    <!-- set Binary="%25GAMEPATH%25\KSP.exe" -->
+    <!-- if not $(ConfigurationName)==Debug goto DEBUGREBUILDCONFIG -->
+    <!-- :DEBUGCONFIG -->
+    <!-- rem Copy DLL and run KSP -->
+    <!-- copy "$(TargetPath)" "%25DestPath%25" -->
+    <!-- if exist "$(ProjectDir)..\..\StartX.exe" goto STARTX -->
+    <!-- echo Running Directly -->
+    <!-- "%25Binary%25" -->
+    <!-- goto END -->
+    <!-- :STARTX -->
+    <!-- echo STARTX running -->
+    <!-- "$(ProjectDir)..\..\StartX.exe" "%25Binary%25" -->
+    <!-- goto END -->
+    <!-- "%25Binary%25" -->
+    <!-- goto END -->
+    <!-- :DEBUGREBUILDCONFIG -->
+    <!-- if not $(ConfigurationName)==DebugAndRebuild goto END -->
+    <!-- rem This one will empty the dest folder and copy all the source files -->
+    <!-- rem Delete the folder and recreate it -->
+    <!-- rmdir /s /q "%25DestPath%25" -->
+    <!-- mkdir "%25DestPath%25" -->
+    <!-- rem Nowcopy all the files from the pluginfiles source -->
+    <!-- xcopy "%25SourcePath%25\*.*" "%25DestPath%25" /SE -->
+    <!-- rem and copy the new dll -->
+    <!-- copy "$(TargetPath)" "%25DestPath%25" -->
+    <!-- rem and then run the game -->
+    <!-- "%25Binary%25" -->
+    <!-- goto END -->
+    <!-- :END</PostBuildEvent> -->
   </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

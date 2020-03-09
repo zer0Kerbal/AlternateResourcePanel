@@ -355,7 +355,7 @@ namespace KSPAlternateResourcePanel
             if (Visible && !UIHidden)
             {
                 Boolean oldMouseOver = MouseOver;
-                MouseOver =  (Event.current.type== EventType.repaint) && WindowRect.Contains(Event.current.mousePosition);
+                MouseOver =  (Event.current.type== EventType.Repaint) && WindowRect.Contains(Event.current.mousePosition);
 
                 if (oldMouseOver != MouseOver)
                 {

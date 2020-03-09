@@ -12,6 +12,7 @@ using System.Text;
 
 using KSP;
 using UnityEngine;
+using ClickThroughFix;
 
 namespace KSPPluginFramework
 {
@@ -145,7 +146,7 @@ namespace KSPPluginFramework
         /// </summary>
         internal GUIStyle WindowStyle = null;
         /// <summary>
-        /// Layout Options for the GUILayout.Window function
+        /// Layout Options for theClickThruBlocker.GUILayoutWindow  function
         /// </summary>
         internal GUILayoutOption[] WindowOptions = null;
 
@@ -242,11 +243,11 @@ namespace KSPPluginFramework
             //Are we using a custom style of the skin style for the window
             if (WindowStyle == null)
             {
-                WindowRect = GUILayout.Window(WindowID, WindowRect, DrawWindowInternal, WindowCaption, WindowOptions);
+                WindowRect =ClickThruBlocker.GUILayoutWindow (WindowID, WindowRect, DrawWindowInternal, WindowCaption, WindowOptions);
             }
             else
             {
-                WindowRect = GUILayout.Window(WindowID, WindowRect, DrawWindowInternal, WindowCaption, WindowStyle, WindowOptions);
+                WindowRect =ClickThruBlocker.GUILayoutWindow (WindowID, WindowRect, DrawWindowInternal, WindowCaption, WindowStyle, WindowOptions);
             }
 
             if (WindowMoveEventsEnabled)
