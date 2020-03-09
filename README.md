@@ -11,3 +11,5 @@ It also has some Staging capabilities added so you can stage from map view and a
 
 ####Downloads
 You can find a full list of all the released versions and their associated KSP version in the [GitHub Releases for the project](https://github.com/TriggerAu/AlternateResourcePanel/releases)
+
+![Validate AVC .version files](https://github.com/zer0Kerbal/AlternateResourcePanel/workflows/Validate%20AVC%20.version%20files/badge.svg)
