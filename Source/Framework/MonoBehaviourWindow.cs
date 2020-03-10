@@ -38,7 +38,7 @@ namespace KSPPluginFramework
         internal MonoBehaviourWindow()
             : base()
         {
-            //do the assembly name add so we get different windowIDs for multiple plugins
+            //do the assembly name add so we get different windowIDs for multiple Plugins
             this.WindowID = UnityEngine.Random.Range(1000, 2000000) + _AssemblyName.GetHashCode();
             this._Visible = false;
             LogFormatted_DebugOnly("WindowID:{0}", WindowID);

@@ -7,12 +7,12 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("KSPAlternateResourcePanel")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyTitle("AlternateResourcePanel")]
+[assembly: AssemblyDescription("An alternate view of vessel resources plugin for Kerbal Space Program")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("TriggerTech")]
 [assembly: AssemblyProduct("KSPAlternateResourcePanel")]
-[assembly: AssemblyCopyright("Copyright ©  2013")]
+[assembly: AssemblyCopyright("Copyright ©  2013-2020")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 

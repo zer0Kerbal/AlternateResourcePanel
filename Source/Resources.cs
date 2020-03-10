@@ -18,14 +18,14 @@ namespace KSPAlternateResourcePanel
         internal static String PathTriggerTech = string.Format("{0}GameData/TriggerTech", PathApp);
         //internal static String PathPlugin = string.Format("{0}/{1}", PathTriggerTech, KSPAlternateResourcePanel._AssemblyName);
         internal static String PathPlugin = System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location).Replace("\\", "/");
-        internal static String PathPluginToolbarIcons = string.Format("{0}/PlugIns/PluginData/ToolbarIcons", PathPlugin);
-        internal static String PathPluginTextures = string.Format("{0}/Plugins/PluginData/Textures", PathPlugin);
+        internal static String PathPluginToolbarIcons = string.Format("{0}/PluginData/ToolbarIcons", PathPlugin);
+        internal static String PathPluginTextures = string.Format("{0}/PluginData/Textures", PathPlugin);
         //internal static String PathPluginData = string.Format("{0}/Data", PathPlugin);
         internal static String PathPluginSounds = string.Format("{0}/Sounds", PathPlugin);
 
         internal static String DBPathTriggerTech = string.Format("TriggerTech");
         internal static String DBPathPlugin = string.Format("TriggerTech/{0}/Plugins", KSPAlternateResourcePanel._AssemblyName);
-        internal static String DBPathToolbarIcons = string.Format("{0}/PlugIns/PluginData//ToolbarIcons", DBPathPlugin);
+        internal static String DBPathToolbarIcons = string.Format("{0}/PluginData/ToolbarIcons", DBPathPlugin);
         //internal static String DBPathTextures = string.Format("{0}/Textures", DBPathPlugin);
         internal static String DBPathPluginSounds = string.Format("{0}/Sounds", DBPathPlugin);
 
@@ -98,6 +98,7 @@ namespace KSPAlternateResourcePanel
 
             clipAlarms = new Dictionary<string, AudioClip>();
             clipAlarms.Add("None", null);
+            MonoBehaviourExtended.LogFormatted("Checking for Sounds folder: {0}", PathPluginSounds);
             if (Directory.Exists(PathPluginSounds))
             {
                 //get all the png and tga's
@@ -199,7 +200,7 @@ namespace KSPAlternateResourcePanel
 
             LoadImageFromFile(ref texSeparatorH, "img_SeparatorHorizontal.png");
             LoadImageFromFile(ref texSeparatorV, "img_SeparatorVertical.png");
-
+            MonoBehaviourExtended.LogFormatted("Checking for ToolbarIcons folder: {0}", PathPluginToolbarIcons);
             LoadImageFromFile(ref texAppLaunchIcon, "KSPARPaBig.png", PathPluginToolbarIcons);
         }
 
@@ -211,9 +212,10 @@ namespace KSPAlternateResourcePanel
             Texture2D texLoading;
 
             //Where are the Icons
-            String strIconPath = string.Format("{0}/{1}", PathPlugin, IconFolderName);
+            String strIconPath = string.Format("{0}/PluginData/{1}", PathPlugin, IconFolderName);
             //String strIconDBPath = string.Format("{0}/{1}", DBPathPlugin, IconFolderName);
 
+            MonoBehaviourExtended.LogFormatted("Checking for strIconPath folder: {0}", strIconPath);
             if (Directory.Exists(strIconPath))
             {
                 //get all the png and tga's

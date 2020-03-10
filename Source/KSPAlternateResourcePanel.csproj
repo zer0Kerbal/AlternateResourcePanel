@@ -7,8 +7,8 @@
     <ProjectGuid>{AD734B14-C1D5-41F8-95C9-2701F8871AA8}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>KSPAlternateResourcePanel</RootNamespace>
-    <AssemblyName>KSPAlternateResourcePanel</AssemblyName>
+    <RootNamespace>AlternateResourcePanel</RootNamespace>
+    <AssemblyName>AlternateResourcePanel</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />
@@ -156,7 +156,7 @@
     <!-- goto END -->
     <!-- :END</PostBuildEvent> -->
   </PropertyGroup>
-    <PropertyGroup>
+  <PropertyGroup>
     <PostBuildEvent>start /D $(ProjectDir)..\  /WAIT deploySUB.bat $(TargetDir) $(TargetFileName)
 
 if $(ConfigurationName) == Release start /D $(ProjectDir)..\ /WAIT buildReleaseNEW.bat $(TargetDir) $(TargetFileName)
