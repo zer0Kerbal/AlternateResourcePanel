@@ -91,6 +91,7 @@ This Mod contains a version checker which can be managed and triggered from the 
 - *See [Known Issues][MOD:issues] for full details of feature requests, and known issues*
 ### Dependencies
 - [x]  [Kerbal Space Program][KSP:website] [![][shield:ksp]][KSP:website] ***may*** work on other versions ]/YMMV/
+- [x]  ***[Clickthrough Blocker][thread:ctb]  ***
 ### Recommends  
 - [x]  [ARPIcons by @Olympic1][thread:ARPI]  
 ### Suggests
@@ -210,7 +211,7 @@ License: ![License MIT][shield:license:original] ![][LOGO:mit]
 [thread:kcl]: https://forum.kerbalspaceprogram.com/index.php?/topic/179207-* "Kerbal Changelog"  
 [thread:twk]: https://forum.kerbalspaceprogram.com/index.php?/topic/179030-* "TweakScale"  
 [thread:crp]: https://forum.kerbalspaceprogram.com/index.php?/topic/83007-* "Community Resource Pack"  
-
+[thread:ctb]: https://forum.kerbalspaceprogram.com/index.php?/topic/170747-* "ClickThrough Blocker"  
 [thread:getsupport]: https://forum.kerbalspaceprogram.com/index.php?/topic/83212-* "Link to how to get support"
 [image:getsupport]:    https://i.postimg.cc/vHP6zmrw/image.png "get support"  
 
