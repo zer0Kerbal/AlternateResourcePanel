@@ -1,6 +1,8 @@
 {
-  "schemaVersion": 1,
-  "label": "Alternative Resource Panel",
-  "message": "3.0.0.0",
-  "color": "orange"
+  "schemaVersion": "1",
+  "label": "Alternate Resource Panel",
+  "labelColor": "darkgreen",
+  "message": "2.9.5.0",
+  "color": "orange",
+  "style": "plastic"
 }

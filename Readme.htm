@@ -1,0 +1,216 @@
+<!-- Readme.md v1.1.4.0
+Alternate Resource Panel (ARP)
+created: 01 Oct 19
+updated: 2020 04 10 -->
+
+<h2 id="download-on-spacedock-or-github-or-curseforge-also-available-on-ckan">Download on <a href="https://spacedock.info/mod/2403" title="SpaceDock">SpaceDock</a> or <a href="https://github.com/zer0Kerbal/AlternateResourcePanel/releases/latest" title="GitHub">Github</a> or <a href="https://www.curseforge.com/kerbal/ksp-mods/alternateresourcepanel" title="CurseForge">Curseforge</a>. Also available on <a href="https://forum.kerbalspaceprogram.com/index.php?/topic/90246-*" title="CKAN">CKAN</a>.</h2>
+<hr />
+<h1 id="alternative-resource-panel-arp-by-triggertech"><em><strong>A</strong></em>lternative <em><strong>R</strong></em>esource <em><strong>P</strong></em>anel (ARP) by TriggerTech</h1>
+<h2 id="an-alternate-view-of-vessel-resources-plugin-for-kerbal-space-program">An alternate view of vessel resources plugin for <a href="https://kerbalspaceprogram.com/" title="Kerbal Space Program">Kerbal Space Program</a></h2>
+<h4 id="adopted-by-zer0kerbal-originally-by-triggerau">Adopted by <a href="https://forum.kerbalspaceprogram.com/index.php?/profile/190933-zer0kerbal/" title="zed&#39;K">@zer0Kerbal</a>, originally by <a href="https://forum.kerbalspaceprogram.com/index.php?/profile/57838-triggerau/" title="TriggerAu">@TriggerAu</a></h4>
+<p><img src="https://img.shields.io/github/v/release/zer0Kerbal/AlternateResourcePanel?include_prereleases?style=plastic" alt="Mod Version" /> <img src="https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/zer0Kerbal/AlternateResourcePanel/master/json/ksp.json" alt="KSP version" /> <img src="https://img.shields.io/badge/KSP-AVC--supported-brightgreen.svg?style=plastic" alt="KSP-AVC" /> <img src="https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/zer0Kerbal/AlternateResourcePanel/master/json/license.json" alt="License MIT" /> <img src="https://i.postimg.cc/bvjfsMP5/MIT-17x17.png" title="MIT" /></p>
+<p><img src="https://img.shields.io/badge/SpaceDock-listed-blue.svg?style=plastic" alt="SpaceDock" /> <img src="https://img.shields.io/badge/CKAN-Indexed-blue.svg?style=plastic" alt="CKAN" /> <img src="https://img.shields.io/badge/Github-Indexed-blue.svg?style=plastic&amp;logo=github" alt="GitHub" /> <img src="https://img.shields.io/badge/CurseForge-listed-blue.svg?style=plastic" alt="Curseforge" /></p>
+<p><img src="https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/zer0Kerbal/Kaboom/master/json/code.json" alt="Code" /> <img src="https://github.com/zer0Kerbal/AlternateResourcePanel/workflows/Validate%20AVC%20.version%20files/badge.svg" alt="Validate AVC .version files" /></p>
+<hr />
+<h1 id="do-not-bother-triggerau-with-anything-concerning-this">Do not bother <a href="https://forum.kerbalspaceprogram.com/index.php?/profile/57838-triggerau/" title="TriggerAu">@TriggerAu</a> with anything concerning this.</h1>
+<hr />
+<h3 id="documentation--manual">Documentation / Manual</h3>
+<p><a href="https://sites.google.com/site/kspalternateresourcepanel/home">Documentation Manual</a></p>
+<h3 id="preamble-by-triggerau">Preamble by <a href="https://forum.kerbalspaceprogram.com/index.php?/profile/57838-triggerau/" title="TriggerAu">@TriggerAu</a>:</h3>
+<h4 id="about">About</h4>
+<blockquote>
+<p>Basically the Alternate Resource panel displays a view of resources in the current vessel with a bit more clarity. It also lets you see the remaining value in the currently active stage for fuels as you fly - which is useful for asparagus staging.</p>
+</blockquote>
+<blockquote>
+<p>It also has some Staging capabilities added so you can stage from map view and also have autostaging on ascent (tied it in because of the resources/last stage tie in)</p>
+</blockquote>
+<p>The KSP Alternate Resource Panel is a plugin to the Kerbal Space program game and was created to provide me an alternate view of the resources list and also add some staging functionality to the map view.</p>
+<p>Basically installing this gives you an extra button labelled "Alternate" next to the Resources button in the top right corner. When you hover over it it will keep the panel displayed while the mouse is over any part of the panel, or if you click it it will be toggled on.</p>
+<p>It displays a list of all the resources that are present on your vessel with a bar graph of the amount on vessel and the amount remaining. It also has the following additional capabilities:<br />
+<img src="https://sites.google.com/site/kspalternateresourcepanel/images/PluginPic.png" title="ARP Hero" alt="AlternateResourcePanel" /></p>
+<ul>
+<li>Displays stage amount/usage - so you can see how much fuel is left in your current stage, esp in an asparagus configuration - Now configure which side the stage is displayed on (*New in 2.4.1.0)</li>
+<li>Adjust the order and Grouping of the Resources so they display how you like - some can even be set to only show up when a threshold is passed - Now with Drag And Drop and Separator Inserts (*New in 2.3.0.0)</li>
+<li>Optionally displays the change rate (or instant consumption) values</li>
+<li>Optionally displays time till empty/full (*New in 2.2.0.0)</li>
+<li>Optionally hide a resource on empty (*New in 2.1.0.0) or on Full (*New in 2.2.0.0)</li>
+<li>Select Resources to see part windows and look at individual components</li>
+<li>Transfer Resources between parts - like the standard part windows (*New in 2.1.0.0)</li>
+<li>Add Alarms to get visual and Audio queues for what needs attention - even add your own sounds</li>
+<li>Maintains settings and visibility between vessel switches/restarts</li>
+<li>KAC style update checker added</li>
+<li>Movable and lockable panel</li>
+<li>Option of the KSP or Unity styles</li>
+<li>Ability to add icons by simply placing files in the right folder</li>
+<li>Ability for Modders to provide icons with their mod and have them display in KSPARP</li>
+<li>Ability to configure the order of preference for icon sets</li>
+<li>Ability to configure resources to hide on full/empty as well as cater to disabled flows for full vessel resources</li>
+<li>Ability to configure non-staging resources to show Active/Reserve values using the green/blue bars (*New in 2.2.2.0)</li>
+<li>Optional Staging facility with Ability to Activate Stages in Map View, and</li>
+<li>Ability to use Space Bar in Map view to activate stages - like in standard flight mode</li>
+<li>Autostaging Controller to activate stages on engine flameout (*New in 2.1.0.0)</li>
+<li>Now contains icons for resources from: Kethane, Deadly Reentry, Extra Planetary Launchpads, KSP Interstellar, Life Support By Bobcat, RealFues, Near Future, TAC Life Support</li>
+<li>API for information reading and alarm acknowledgement (*New in 2.1.0.0)</li>
+</ul>
+<h4 id="currently-is-feature-complete">Currently is Feature Complete</h4>
+<h3 id="heres-some-vision-of-the-arp-in-use---updated-for-21">Heres some vision of the ARP in use - updated for 2.1</h3>
+<p><a href="https://youtu.be/i6aeXKR0YQ0" title="Demo"><img src="https://img.youtube.com/vi/i6aeXKR0YQ0/0.jpg" title="click to watch" /></a></p>
+<p><a href="https://youtu.be/mrWzFdsQBwY" title="2.1.0.0 Panels"><img src="https://img.youtube.com/vi/mrWzFdsQBwY/0.jpg" title="click to watch" /></a></p>
+<p><a href="https://youtu.be/7Zxh4SNLrBs" title="2.3.0.0 Drag and Drop"><img src="https://img.youtube.com/vi/7Zxh4SNLrBs/0.jpg" title="click to watch" /></a></p>
+<p><a href="https://youtu.be/7Zxh4SNLrBs">https://youtu.be/7Zxh4SNLrBs</a></p>
+<p>Hopefully <a href="https://forum.kerbalspaceprogram.com/index.php?/profile/57838-triggerau/" title="TriggerAu">@TriggerAu</a> has built this simple enough that the pic below explains all you need... OK, we've moved past that point :) . The below will give you an eyeball at the main screen, but you will find the details on rest of the settings on the Documentation site linked below <img src="https://sites.google.com/site/kspalternateresourcepanel/images/KSPARPMap.png" title="ARP Explained" alt="AlternateResourcePanel" /></p>
+<h4 id="player-created-icon-sets">Player Created Icon Sets</h4>
+<ul>
+<li><a href="https://forum.kerbalspaceprogram.com/index.php?/topic/193078-*" title="ARPIcons">Icons by Olympic1 by Olympic1</a></li>
+<li>[Icon Set by pheonix_ca] and [IMGUR Gallery][IMGUR:url]</li>
+</ul>
+<h1 id="network-connectivity-details">Network Connectivity Details</h1>
+<p>This Mod contains a version checker which can be managed and triggered from the About tab of the settings. It is configured to check once a day by default, and this check also can be disabled. The technical details of it are as follows:</p>
+<ul>
+<li>It will once a day download this page <a href="https://sites.google.com/site/kspalternateresourcepanel/latestversion">https://sites.google.com/site/kspalternateresourcepanel/latestversion</a> to read the current up to date version number.</li>
+<li>It issues an HTTP GET - and sends no data</li>
+<li>It parses the response for the version tag and then notifies you if there is a more recent version is available</li>
+</ul>
+<h3 id="installation-directions">Installation Directions:</h3>
+<ul>
+<li>Use CKAN<br />
+<img src="https://i.postimg.cc/x8XSVg4R/sj507JC.png" title="CKAN" /></li>
+</ul>
+<h3 id="changelog-summary">Changelog Summary</h3>
+<ul>
+<li><em>See <a href="https://raw.githubusercontent.com/zer0Kerbal/AlternateResourcePanel/master/Changelog.cfg">ChangeLog</a> for full details of mod changes</em></li>
+</ul>
+<h3 id="known-issues">Known Issues</h3>
+<ul>
+<li><em>See <a href="https://github.com/zer0Kerbal/AlternateResourcePanel/issues">Known Issues</a> for full details of feature requests, and known issues</em></li>
+</ul>
+<h3 id="dependencies">Dependencies</h3>
+<ul class="task-list">
+<li><input type="checkbox" disabled="" checked="" />
+<a href="https://kerbalspaceprogram.com/" title="Kerbal Space Program">Kerbal Space Program</a> <a href="https://kerbalspaceprogram.com/" title="Kerbal Space Program"><img src="https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/zer0Kerbal/AlternateResourcePanel/master/json/ksp.json" /></a> <em><strong>may</strong></em> work on other versions ]/YMMV/</li>
+</ul>
+<h3 id="recomends">Recomends</h3>
+<ul class="task-list">
+<li><input type="checkbox" disabled="" checked="" />
+<a href="https://forum.kerbalspaceprogram.com/index.php?/topic/193078-*" title="ARPIcons">ARPIcons by @Olympic1</a></li>
+</ul>
+<h3 id="suggests">Suggests</h3>
+<p><strong>By <a href="https://forum.kerbalspaceprogram.com/index.php?/profile/190933-zer0kerbal/" title="zed&#39;K">zer0Kerbal</a></strong></p>
+<ul class="task-list">
+<li><input type="checkbox" disabled="" checked="" />
+<a href="https://forum.kerbalspaceprogram.com/index.php?/topic/187625-*" title="On Demand Fuel Cells">On Demand Fuel Cells {ODFC)}</a></li>
+<li><input type="checkbox" disabled="" checked="" />
+<a href="https://forum.kerbalspaceprogram.com/index.php?/topic/188841-*" title="Field Training Facility">Field Training Facility (FTF)</a></li>
+<li><input type="checkbox" disabled="" checked="" />
+<a href="https://forum.kerbalspaceprogram.com/index.php?/topic/188841-*" title="Field Training Lab">Field Training Lab (FTL)</a></li>
+<li><input type="checkbox" disabled="" checked="" />
+<a href="https://forum.kerbalspaceprogram.com/index.php?/topic/192184-*" title="Docking Port Descriptions">Docking Port Descriptions(DPD)</a></li>
+<li><input type="checkbox" disabled="" checked="" />
+<a href="https://forum.kerbalspaceprogram.com/index.php?/topic/192187-*" title="Shielded PicoPort">PicoPort Shielded (PPS)</a></li>
+<li><input type="checkbox" disabled="" checked="" />
+<a href="https://forum.kerbalspaceprogram.com/index.php?/topic/187495-*" title="Transparent Command Pods">Transparent Command Pods Repressurized(TCP)</a></li>
+<li><input type="checkbox" disabled="" checked="" />
+<a href="https://forum.kerbalspaceprogram.com/index.php?/topic/191719-*" title="Stork Delivery System (SDS)">Stork Delivery System (SDS)</a></li>
+<li><input type="checkbox" disabled="" checked="" />
+<a href="https://forum.kerbalspaceprogram.com/index.php?/topic/191426-*" title="Biomatic">Biomatic</a></li>
+<li><input type="checkbox" disabled="" checked="" />
+<a href="https://forum.kerbalspaceprogram.com/index.php?/topic/190870-*" title="B9 Stock Patches">B9 Stock Switches (B9S)</a></li>
+<li><input type="checkbox" disabled="" checked="" />
+<a href="https://forum.kerbalspaceprogram.com/index.php?/topic/192696-*" title="KGEx"><em>K</em>er<em>G</em>uise <em>E</em>ngineering e<em>X</em>perimental (KGX)</a></li>
+<li><input type="checkbox" disabled="" checked="" />
+<a href="https://forum.kerbalspaceprogram.com/index.php?/topic/192360-*" title="Oh Scrap!">Oh Scrap!</a></li>
+<li><input type="checkbox" disabled="" checked="" />
+<a href="https://forum.kerbalspaceprogram.com/index.php?/topic/192360-*" title="ScrapYard">ScrapYard</a></li>
+<li><input type="checkbox" disabled="" checked="" />
+<a href="https://forum.kerbalspaceprogram.com/index.php?/topic/191719-*" title="DaMichel&#39;s AeroRadial">DaMichel's AeroRadial</a></li>
+<li><input type="checkbox" disabled="" checked="" />
+<a href="https://forum.kerbalspaceprogram.com/index.php?/topic/191719-*" title="DaMichel&#39;s CargoBays">DaMichel's CargoBays</a></li>
+<li><input type="checkbox" disabled="" checked="" />
+<a href="https://forum.kerbalspaceprogram.com/index.php?/topic/191719-*" title="DaMichel&#39;s Fuselage">DaMichel's Fuselage</a></li>
+<li><input type="checkbox" disabled="" checked="" />
+<a href="https://forum.kerbalspaceprogram.com/index.php?/topic/191719-*" title="DaMichel&#39;s Spherical Tanks">DaMichel's Spherical Tanks</a></li>
+<li><input type="checkbox" disabled="" checked="" />
+<a href="https://forum.kerbalspaceprogram.com/index.php?/topic/191719-*" title="Stork Delivery System (SDS)">Stork Delivery System (SDS)</a></li>
+<li><input type="checkbox" disabled="" checked="" />
+<a href="https://forum.kerbalspaceprogram.com/index.php?/topic/191424-*" title="SimpleConstructon!">SimpleConstructon!</a></li>
+<li><input type="checkbox" disabled="" checked="" />
+<a href="https://forum.kerbalspaceprogram.com/index.php?/topic/191504-*" title="Not So SimpleConstructon!">Not So SimpleConstructon!</a></li>
+<li><input type="checkbox" disabled="" checked="" />
+<a href="https://forum.kerbalspaceprogram.com/index.php?/topic/193050-*" title="Stock Inline Lights">Stack Inline Lights</a></li>
+<li><input type="checkbox" disabled="" checked="" />
+<a href="https://forum.kerbalspaceprogram.com/index.php?/topic/193051-*" title="Stock Inline Lights Patches">Stack Inline Light Patches</a></li>
+<li><input type="checkbox" disabled="" checked="" />
+<a href="https://forum.kerbalspaceprogram.com/index.php?/topic/192938-*" title="KaboOom!">KaboOom!</a></li>
+<li><input type="checkbox" disabled="" checked="" />
+<a href="https://forum.kerbalspaceprogram.com/index.php?/topic/188246-*" title="More Hitchhikers">More Hitchhikers</a><br />
+<strong>Under construction</strong></li>
+<li><input type="checkbox" disabled="" checked="" />
+<a href="https://forum.kerbalspaceprogram.com/index.php?/topic/191526-*" title="SimpleLife!">SimpleLife!</a></li>
+<li><input type="checkbox" disabled="" checked="" />
+<a href="https://" title="SimpleDeadly!">SimpleDeadly!</a></li>
+<li><input type="checkbox" disabled="" checked="" />
+<a href="https://forum.kerbalspaceprogram.com/index.php?/topic/191525-*" title="MoarKerbals!">MoarKerbals!</a></li>
+<li><input type="checkbox" disabled="" checked="" />
+<a href="https://forum.kerbalspaceprogram.com/index.php?/topic/21466-*" title="Nuke Tiny Parts">Nuke Tiny Parts</a><br />
+<strong>Other wonderful mods</strong></li>
+<li><input type="checkbox" disabled="" checked="" />
+<a href="https://forum.kerbalspaceprogram.com/index.php?/topic/179030-*" title="TweakScale">TweakScale</a></li>
+<li><input type="checkbox" disabled="" checked="" />
+<a href="https://forum.kerbalspaceprogram.com/index.php?/topic/50533-*" title="Module Manager">Module Manager</a></li>
+<li><input type="checkbox" disabled="" checked="" />
+<a href="https://forum.kerbalspaceprogram.com/index.php?/topic/83007-*" title="Community Resource Pack">Community Resource Pack</a></li>
+</ul>
+<h3 id="supported-mods">Supported Mods</h3>
+<ul class="task-list">
+<li><input type="checkbox" disabled="" checked="" />
+<a href="https://forum.kerbalspaceprogram.com/index.php?/topic/179030-*" title="TweakScale">TweakScale</a></li>
+<li><input type="checkbox" disabled="" checked="" />
+<a href="https://forum.kerbalspaceprogram.com/index.php?/topic/179207-*" title="Kerbal Changelog">Kerbal Changelog</a></li>
+</ul>
+<h3 id="conflicts">Conflicts</h3>
+<ul class="task-list">
+<li><input type="checkbox" disabled="" checked="" />
+none known</li>
+</ul>
+<h3 id="replaces">Replaces</h3>
+<ul class="task-list">
+<li><input type="checkbox" disabled="" checked="" />
+<a href="https://forum.kerbalspaceprogram.com/index.php?/topic/54876-*" title="Alternate Resource Panel">Alternate Resource Panel (original)</a></li>
+</ul>
+<h3 id="tags">Tags</h3>
+<ul>
+<li>resource, skin, mod, ksp, plugin, mit, addon</li>
+</ul>
+<h3 id="downloads">Downloads</h3>
+<p>You can download the icons pack by clicking on one of the links:<br />
+<a href="https://github.com/zer0Kerbal/AlternateResourcePanel/releases/latest" title="GitHub"><img src="https://i.imgur.com/RE4Ppr9.png" title="github" /></a> <a href="https://spacedock.info/mod/2403" title="SpaceDock"><img src="https://i.imgur.com/m0a7tn2.png" title="spacedock" /></a> <a href="https://www.curseforge.com/kerbal/ksp-mods/alternateresourcepanel" title="CurseForge"><img src="https://i.postimg.cc/RZNyB5vP/Download-On-Curse.png" title="curseforge" /></a></p>
+<hr />
+<p><em>red box below is a link to forum post on how to get support</em><br />
+<a href="https://forum.kerbalspaceprogram.com/index.php?/topic/83212-*" title="Link to how to get support"><img src="https://i.postimg.cc/vHP6zmrw/image.png" title="get support" alt="How to get support" /></a></p>
+<hr />
+<h3 id="license">License</h3>
+<h4 id="aka-legal-mumbo-jumbo">aka Legal Mumbo Jumbo</h4>
+<p>Source: <a href="https://github.com/zer0Kerbal/AlternateResourcePanel/">GitHub</a><br />
+License: <img src="https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/zer0Kerbal/AlternateResourcePanel/master/json/license.json" alt="License MIT" /> <img src="https://i.postimg.cc/bvjfsMP5/MIT-17x17.png" title="MIT" /></p>
+<blockquote>
+<p>*** All bundled mods are distributed under their own licenses***<br />
+*** All art assets (textures, models, animations) are distributed under their own licenses***</p>
+</blockquote>
+<h3 id="original">Original</h3>
+<p>Author: <a href="https://forum.kerbalspaceprogram.com/index.php?/profile/57838-triggerau/" title="TriggerAu">@TriggerAu</a><br />
+<a href="https://forum.kerbalspaceprogram.com/threads/60227-*" title="ARP thread">Thread</a><br />
+<a href="https://github.com/TriggerAU/AlternateResourcePanel/releases/latest">Download</a><br />
+Source: <a href="https://github.com/TriggerAu/AlternateResourcePanel">GitHub</a><br />
+License: <img src="https://img.shields.io/badge/license-MIT-red?style=plastic&amp;labelColor=black" title="MIT" alt="License MIT" /> ![][LOGO:mit]</p>
+<hr />
+<p><em>Be Kind: Lithobrake, not jakebrake! Keep your Module Manager up to date</em></p>
+<h6 id="v2950-original-01-oct-2019-zedk--updated-16-mar-2020-zedk">v2.9.5.0 original: 01 Oct 2019 zed'K | updated: 16 Mar 2020 zed'K</h6>
+<!--- original mod stuff -->
+
+<!--- license logo urls -->
+
+<!-- zer0Kerbal mods -->
+
+<!--
+this file: GPLv2
+zer0Kerbal-->
