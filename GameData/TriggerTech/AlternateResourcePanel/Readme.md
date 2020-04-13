@@ -91,7 +91,7 @@ This Mod contains a version checker which can be managed and triggered from the 
 - *See [Known Issues][MOD:issues] for full details of feature requests, and known issues*
 ### Dependencies
 - [x]  [Kerbal Space Program][KSP:website] [![][shield:ksp]][KSP:website] ***may*** work on other versions ]/YMMV/
-### Recomends  
+### Recommends  
 - [x]  [ARPIcons by @Olympic1][thread:ARPI]  
 ### Suggests
 **By [zer0Kerbal][LINK:zer0Kerbal]**  
