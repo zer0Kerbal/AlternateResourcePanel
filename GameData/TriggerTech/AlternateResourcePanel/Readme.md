@@ -91,7 +91,7 @@ This Mod contains a version checker which can be managed and triggered from the 
 - *See [Known Issues][MOD:issues] for full details of feature requests, and known issues*
 ### Dependencies
 - [x]  [Kerbal Space Program][KSP:website] [![][shield:ksp]][KSP:website] ***may*** work on other versions ]/YMMV/
-- [x]  ***[Clickthrough Blocker][thread:ctb]  ***
+- [x]  ***[Clickthrough Blocker][thread:ctb]  ***  
 ### Recommends  
 - [x]  [ARPIcons by @Olympic1][thread:ARPI]  
 ### Suggests
@@ -216,7 +216,7 @@ License: ![License MIT][shield:license:original] ![][LOGO:mit]
 [image:getsupport]:    https://i.postimg.cc/vHP6zmrw/image.png "get support"  
 
 [image:ckan]:  https://i.postimg.cc/x8XSVg4R/sj507JC.png "CKAN"  
-[thread:ckan]: https://forum.kerbalspaceprogram.com/index.php?/topic/90246-* "CKAN"  
+[thread:ckan]: https://forum.kerbalspaceprogram.com/index.php?/topic/154922-* "CKAN"  
 [image:ckan:sm]: https:// "CKAN (small)"  
 
 [LINK:zer0Kerbal]:     https://forum.kerbalspaceprogram.com/index.php?/profile/190933-zer0kerbal/ "zed'K"  
@@ -265,6 +265,8 @@ License: ![License MIT][shield:license:original] ![][LOGO:mit]
 [thread:ODFC]: https://forum.kerbalspaceprogram.com/index.php?/topic/187625-* "On Demand Fuel Cells"  
 [thread:NSSC]:  https://forum.kerbalspaceprogram.com/index.php?/topic/191504-* "Not So SimpleConstructon!"  
 [thread:BOOM]: https://forum.kerbalspaceprogram.com/index.php?/topic/192938-* "KaboOom!"
+
+
 <!--
 this file: GPLv2
 zer0Kerbal-->
